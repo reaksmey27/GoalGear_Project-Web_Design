@@ -95,3 +95,471 @@ html {
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    display: inline-block;
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+.home-info h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px #EDBB00;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+.home-info h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid#EDBB00;
+    color: #EDBB00;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes fill-text {
+
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+.home-info p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 38px;
+    background-color: #EDBB00;
+    border: 2px solid #EDBB00;
+    border-radius: 40px;
+    box-shadow: 0 0 18px #EDBB00;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+.btn:not(.secondary):hover {
+    background: transparent;
+    color: #EDBB00;
+    box-shadow: none;
+}
+
+.secondary {
+    background: transparent;
+    color: #EDBB00;
+    border: 2px solid #EDBB00;
+    box-shadow: none;
+    margin-left: 10px;
+}
+
+.secondary:hover {
+    background-color: #EDBB00;
+    box-shadow: 0 0 18px #EDBB00;
+}
+
+.home-info .btn-sci .btn {
+    text-decoration: none;
+    color: white;
+}
+
+.home-info .btn-sci .sci {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid#EDBB00;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #EDBB00;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: #EDBB00;
+    color: #1f242d;
+    box-shadow: 0 0 10px#EDBB00;
+}
+
+.home-img .img-box {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #1f242d;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from var(--angle), transparent 50%, #EDBB00);
+    border-radius: 50%;
+    animation: rotate-border 5s linear infinite;
+    z-index: -1;
+}
+
+.img-box::before {
+    filter: blur(5px);
+    padding: 8px;
+    box-shadow: 0px 0p 10px pink;
+    opacity: 0.5;
+}
+
+@keyframes rotate-border {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, #1f242d, #12151d);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+    position: absolute;
+    top: 5px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.featured {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 32px;
+    color: #EDBB00;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.featured-products {
+    padding: 40px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #EDBB00;
+}
+
+.products-flex {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    padding: 16px;
+}
+
+.product-item {
+    flex: 0 0 auto;
+    min-width: 280px;
+    scroll-snap-align: start;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    background: white;
+}
+
+.product-item-last {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-item-last .more {
+    border: none;
+    background-color: white;
+}
+
+.product-item-last .more span {
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    padding: 8px 0px;
+    background-color: #EDBB00;
+    border-radius: 8px;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item {
+    position: relative;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: 300px;
+    padding: 40px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #EDBB00;
+    margin-bottom: 8px;
+}
+
+.product-item .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.product-item .rating .bx {
+    color: #EDBB00;
+}
+
+.product-item .rating .bx-star {
+    color: #ccc;
+}
+
+.product-item .rating-value {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #222;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.badge.featured {
+    background-color: #EDBB00;
+}
+
+.badge.new {
+    background: #4caf50;
+}
+
+.badge.sale {
+    background: #e63946;
+}
+
+.badge.limited {
+    background: darkgray;
+}
+
+.badge.best-seller {
+    background: #2196f3;
+}
+
+.product-item button {
+    background-color: #EDBB00;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.product-item button:hover {
+    background-color: #cfa200;
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.container .btn {
+    color: white;
+}
+
+.discount-banner {
+    width: 100%;
+    background: #EDBB00;
+    overflow: hidden;
+    padding: 12px 0;
+}
+
+.discount-track {
+    display: flex;
+    gap: 50px;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
+}
+
+.discount-slide {
+    flex: 0 0 auto;
+
+}
+
+.discount-slide span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 20px;
+    display: inline-block;
+}
+
+.promo-slider-loop {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.promo-track {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.slide {
+    flex: 0 0 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+    border: 4px solid white;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.4;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
