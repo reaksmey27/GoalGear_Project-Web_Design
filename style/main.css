@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top left, #1f242d, #12151d);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px;
+    background: linear-gradient(90deg, #004D98, #A50044, #3E1F92);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 8, 16, 0.6);
+}
+
+.navbar img {
+    max-width: 50px;
+}
+
+.navbar .user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #EDBB00;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 5px 0;
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background: #EDBB00;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.navbar ul li a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar .profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar .profile .material-symbols-outlined {
+    font-size: 32px;
+    font-weight: bolder;
+    color: #EDBB00;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
