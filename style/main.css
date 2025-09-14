@@ -800,3 +800,28 @@ html {
     border: 2px solid #EDBB00;
     box-shadow: none;
 }
+
+.collection-header {
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.collection-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #EDBB00;
+    text-align: center;
+}
+
+.collection-header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.collection-controls {
+    margin-bottom: 30px;
+}
