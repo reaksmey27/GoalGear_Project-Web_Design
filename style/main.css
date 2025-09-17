@@ -105,6 +105,12 @@ html {
     color: #fff;
 }
 
+.home-info {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s ease forwards;
+}
+
 .home-info h1 {
     font-size: 55px;
 }
@@ -226,6 +232,12 @@ html {
     box-shadow: 0 0 10px#FF9933;
 }
 
+.home-img {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s ease forwards;
+}
+
 .home-img .img-box {
     width: 500px;
     height: 500px;
@@ -298,6 +310,18 @@ html {
     height: 100%;
     object-fit: cover;
     z-index: 2;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .featured {
