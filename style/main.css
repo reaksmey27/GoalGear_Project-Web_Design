@@ -515,7 +515,7 @@ html {
 
 .discount-track {
     display: inline-block;
-    animation: scroll 15s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
 .discount-slide {
@@ -533,7 +533,7 @@ html {
 
 .promo-track {
     display: flex;
-    animation: scroll 15s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
 .slide {
