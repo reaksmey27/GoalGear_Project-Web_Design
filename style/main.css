@@ -20,7 +20,6 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 8px 30px;
-    /* background: linear-gradient(90deg, #004D98, #A50044, #3E1F92); */
     background: white;
     backdrop-filter: blur(5px);
     position: fixed;
@@ -35,12 +34,24 @@ html {
     max-width: 50px;
 }
 
-.navbar .user {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+.navbar .logo h2 {
+    padding: 4px;
+    background: linear-gradient(120deg, #ff1a1a, #0066ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;      
+    color: transparent;
+    font-weight: bolder;
+}
+
+
 
 .navbar ul {
     display: flex;
@@ -58,8 +69,8 @@ html {
     font-size: 18px;
     font-weight: bold;
     color: #FF9933;
-    transition: color 0.3s ease, transform 0.3s ease;
     padding: 5px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar ul li a::after {
@@ -86,15 +97,39 @@ html {
 .navbar .profile {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
-.navbar .profile .material-symbols-outlined {
-    font-size: 32px;
-    font-weight: bolder;
-    color: #FF9933;
+.navbar .profile button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #FF9933;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .profile button:hover {
+    background-color: #EDBB00;
+    transform: scale(1.05);
+}
+
+.navbar .profile span {
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.profile .menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #FF9933;
 }
 
 .home {
@@ -218,7 +253,7 @@ html {
 .home-info .btn-sci .sci a {
     display: inline-flex;
     padding: 8px;
-    border: 2px solid#FF9933;
+    border: 2px solid #FF9933;
     border-radius: 50%;
     font-size: 20px;
     color: #FF9933;
@@ -519,7 +554,7 @@ html {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
@@ -864,12 +899,8 @@ html {
     text-align: center;
 }
 
-.collection-controls {
-    margin-bottom: 30px;
-}
-
 .about {
-    padding: 60px 80px;
+    padding: 20px 80px;
     background-color: white;
     color: #fff;
 }
@@ -891,6 +922,9 @@ html {
 }
 
 .about-story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 60px;
 }
 
@@ -912,7 +946,7 @@ html {
 
 .values {
     display: flex;
-    gap: 30px;
+    gap: 60px;
     justify-content: center;
     margin-bottom: 60px;
 }
@@ -954,7 +988,7 @@ html {
 
 .team {
     display: flex;
-    gap: 30px;
+    gap: 60px;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 60px;
@@ -962,7 +996,7 @@ html {
 
 .team-member {
     text-align: center;
-    width: 200px;
+    width: 220px;
     padding: 32px;
     border-radius: 15px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
@@ -974,7 +1008,7 @@ html {
 
 .team-member img {
     width: 100%;
-    height: 150px;
+    height: 160px;
     margin-bottom: 10px;
 }
 
@@ -1014,7 +1048,7 @@ html {
 .partner-section h2 {
     font-size: 30px;
     color: #FF9933;
-    margin-bottom: 30px;
+    margin-bottom: 72px;
 }
 
 .partner-slider {
@@ -1325,4 +1359,280 @@ html {
     background: #FF9933;
     color: white;
     font-weight: bold;
+}
+
+/* Laptop screens */
+@media (max-width: 1280px) {
+    .navbar {
+        padding: 8px 25px;
+    }
+
+    .navbar img {
+        max-width: 50px;
+    }
+
+    .navbar ul {
+        gap: 35px;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
+    .navbar .profile {
+        gap: 20px;
+    }
+
+    .navbar .profile button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .home {
+        padding: 50px 6%;
+    }
+
+    .home-info h1 {
+        font-size: 48px;
+    }
+
+    .home-info h2 {
+        font-size: 28px;
+    }
+
+    .home-img .img-box {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+/* Tablet screens */
+@media (max-width: 1023px) {
+    .navbar {
+        padding: 8px 20px;
+    }
+
+    .navbar img {
+        max-width: 45px;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 998;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .profile .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: #FF9933;
+    }
+
+    .home {
+        margin-top: 50px;
+        padding: 40px 5% 20px;
+        height: auto;
+    }
+
+    .home-info {
+        margin-bottom: 30px;
+    }
+
+    .home-info h1 {
+        font-size: 32px;
+    }
+
+    .home-info h2 {
+        font-size: 20x;
+    }
+
+    .home-info p {
+        font-size: 14px;
+    }
+
+    .home-img .img-box {
+        width: 300px;
+        height: 300px;
+    }
+    .btn {
+        padding: 10px 20px;   
+        font-size: 12px; 
+    }
+
+    .secondary {
+        margin-left: 8px;
+    }
+
+    .home-info .btn-sci .sci a {
+        padding: 4px;
+        font-size: 16px;
+    }
+
+    .products-flex {
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .product-item {
+        min-width: 180px; /* slightly smaller cards */
+        padding: 10px;
+    }
+
+    .product-item img {
+        height: 200px;
+        padding: 15px 15px 0 15px;
+    }
+
+    .product-item h3 {
+        font-size: 14px;
+    }
+
+    .product-item p {
+        font-size: 14px;
+    }
+
+    .badge {
+        font-size: 11px;
+        padding: 3px 6px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .product-item button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+/*  Mobile screens */
+@media (max-width: 767px) {
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 998;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .profile .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: #FF9933;
+    }
+
+    .home {
+        margin-top: 80px;
+        padding: 30px 4% 20px;
+        height: auto;
+    }
+
+    .home-info h1 {
+        font-size: 24px;
+    }
+
+    .home-info h2 {
+        font-size: 16px;
+    }
+
+    .home-info p {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .home-img .img-box {
+        width: 220px;
+        height: 220px;
+    }
+
+    .btn-sci {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 4px 16px;   
+        font-size:12px; 
+    }
+
+    .secondary {
+        margin-left: 4px;
+    }
+
+    .home-info .btn-sci .sci a {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .products-flex {
+        gap: 12px;
+        padding: 8px;
+    }
+
+    .product-item {
+        min-width: 120px;
+        padding: 8px;
+    }
+
+    .product-item img {
+        height: 120px;
+        padding: 10px 10px 0 10px;
+    }
+
+    .product-item h3 {
+        font-size: 12px;
+    }
+
+    .product-item p {
+        font-size: 10px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 2px 5px;
+        top: 8px;
+        left: 8px;
+    }
+
+    .product-item button {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+    
 }
