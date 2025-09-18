@@ -903,7 +903,7 @@ html {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 100%;
 }
 
 .container h2 {
@@ -979,14 +979,13 @@ html {
 .team {
     display: flex;
     gap: 60px;
-    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 60px;
 }
 
 .team-member {
     text-align: center;
-    width: 220px;
+    width: 300px;
     padding: 32px;
     border-radius: 15px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
@@ -998,7 +997,7 @@ html {
 
 .team-member img {
     width: 100%;
-    height: 160px;
+    height: 250px;
     margin-bottom: 10px;
 }
 
@@ -1315,6 +1314,14 @@ html {
     color: #aaa;
 }
 
+.footer-support ul li {
+    list-style: none;
+}
+
+.footer-support ul li a {
+    color: #FF9933;
+}
+
 .footer-newsletter p {
     font-size: 14px;
     color: #aaa;
@@ -1560,13 +1567,8 @@ html {
         line-height: 1.5;
     }
 
-    .values {
-        flex-direction: column;
-        gap: 30px;
-    }
-
     .value-card {
-        width: 250px;
+        width: 300px;
         padding: 20px;
         font-size: 18px;
     }
@@ -1581,12 +1583,12 @@ html {
     }
 
     .team-member {
-        width: 180px;
+        width: 300px;
         padding: 24px;
     }
 
     .team-member img {
-        height: 140px;
+        height: 160px;
     }
 
     .team-member h3 {
@@ -1596,6 +1598,53 @@ html {
     .team-member p {
         font-size: 14px;
     }
+
+    .partner-section {
+        padding: 40px 0;
+    }
+
+    .partner-section h2 {
+        font-size: 26px;
+        margin-bottom: 50px;
+    }
+
+    .partner-track {
+        animation: scroll 15s linear infinite;
+    }
+
+    .partner-item {
+        width: 150px;
+        height: 70px;
+        margin: 0 15px;
+    }
+
+    .contact-container {
+        padding: 20px 40px;
+    }
+
+    .contact-container h2 {
+        font-size: 28px;
+    }
+
+    .contact-wrapper {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: 1 1 100%;
+        padding: 25px;
+    }
+
+    .map-container h3 {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 40px 15px 15px;
+    }
+
 }
 
 /*  Mobile screens */
@@ -1631,7 +1680,9 @@ html {
     }
 
     .home {
-        margin-top: 80px;
+        flex-direction: column-reverse;
+        gap: 20px;
+        margin-top: 60px;
         padding: 30px 4% 20px;
         height: auto;
     }
@@ -1654,27 +1705,32 @@ html {
     }
 
     .home-img .img-box {
-        width: 220px;
-        height: 220px;
-    }
-
-    .btn-sci {
-        flex-direction: column;
-        gap: 10px;
+        width: 200px;
+        height: 200px;
     }
 
     .btn {
-        padding: 4px 16px;
+        padding: 8px 20px;
         font-size: 12px;
     }
 
     .secondary {
-        margin-left: 4px;
+        margin-left: 6px;
     }
 
     .home-info .btn-sci .sci a {
         padding: 8px;
         font-size: 16px;
+    }
+
+    .featured-products {
+        padding: 20px 0px;
+    }
+
+    .featured-products h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #FF9933;
     }
 
     .products-flex {
@@ -1683,13 +1739,13 @@ html {
     }
 
     .product-item {
-        min-width: 120px;
+        max-width: 100px;
         padding: 8px;
     }
 
     .product-item img {
-        height: 120px;
-        padding: 10px 10px 0 10px;
+        height: 160px;
+        padding: 20px 20px 0 20px;
     }
 
     .product-item h3 {
@@ -1725,26 +1781,35 @@ html {
         height: 180px;
     }
 
-    #product-search {
-        min-width: 150px;
-        font-size: 14px;
+    .search-container {
+        /* flex-direction: column; */
+        gap: 12px;
     }
 
-    .search-container .material-symbols-outlined {
-        font-size: 24px;
-        padding: 4px;
+    #product-search {
+        width: 100%;
+        min-width: unset;
     }
 
     .sort-flex {
         flex-direction: column-reverse;
-        gap: 12px;
+        gap: 16px;
+        align-items: stretch;
     }
 
-    .sort label,
-    .sort select {
+    .sort label {
+        margin-right: 0;
         font-size: 14px;
-        height: 32px;
-        padding: 0 10px;
+    }
+
+    .sort select {
+        width: 40%;
+        height: 20px;
+        font-size: 14px;
+    }
+    
+    .categories {
+        gap: 5px;
     }
 
     .categories-list h2 {
@@ -1769,13 +1834,13 @@ html {
     }
 
     .product-info h3 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .product-info p,
     .product-card .rating,
     .product-card .rating-value {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .product-info button {
@@ -1816,32 +1881,32 @@ html {
     }
 
     .values {
-        display: flex;
         gap: 20px;
     }
 
     .value-card {
-        width: 200px;
+        width: 160px;
         padding: 15px;
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .value-card i {
-        font-size: 26px;
+        font-size: 20px;
         margin-bottom: 8px;
     }
 
     .team {
         gap: 20px;
+        margin-bottom: 10px;
     }
 
     .team-member {
         width: 160px;
-        padding: 20px;
+        padding: 0 20px;
     }
 
     .team-member img {
-        height: 120px;
+        height: 90px;
     }
 
     .team-member h3 {
@@ -1850,6 +1915,99 @@ html {
 
     .team-member p {
         font-size: 13px;
+    }
+
+    .partner-section {
+        padding: 30px 0;
+    }
+
+    .partner-section h2 {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .partner-track {
+        animation: scroll 10s linear infinite;
+    }
+
+    .partner-item {
+        width: 120px;
+        height: 60px;
+        margin: 0 10px;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-container h2 {
+        font-size: 24px;
+    }
+
+    .section-intro {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+
+    .contact-form label,
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .social-links a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .map-container {
+        margin-top: 30px;
+    }
+
+    .map-container h3 {
+        font-size: 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 
 }
