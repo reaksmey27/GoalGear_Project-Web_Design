@@ -1540,6 +1540,40 @@ html {
         font-size: 15px;
     }
 
+    .sort-flex {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .search-container {
+        flex: 1;
+        max-width: 400px;
+    }
+
+    #product-search {
+        flex: 1 1 250px;
+        min-width: 300px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .sort label {
+        font-size: 16px;
+    }
+
+    .sort select {
+        font-size: 16px;
+        height: 36px;
+    }
+
+    .search-container .material-symbols-outlined {
+        font-size: 28px;
+        padding: 6px;
+    }
+
     .about {
         padding: 20px 40px;
     }
@@ -1807,7 +1841,7 @@ html {
         height: 20px;
         font-size: 14px;
     }
-    
+
     .categories {
         gap: 5px;
     }
