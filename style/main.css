@@ -46,7 +46,7 @@ html {
     background: linear-gradient(120deg, #ff1a1a, #0066ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;      
+    background-clip: text;
     color: transparent;
     font-weight: bolder;
 }
@@ -553,17 +553,6 @@ html {
     transform: scale(1.05);
 }
 
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.container .btn {
-    color: white;
-}
-
 .discount-banner {
     background-color: #FF9933;
     color: white;
@@ -633,7 +622,8 @@ html {
 
 .categories-list {
     background-color: #fff;
-    padding: 20px 0;
+    padding: 40px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .search-container {
@@ -1361,55 +1351,6 @@ html {
     font-weight: bold;
 }
 
-/* Laptop screens */
-@media (max-width: 1280px) {
-    .navbar {
-        padding: 8px 25px;
-    }
-
-    .navbar img {
-        max-width: 50px;
-    }
-
-    .navbar ul {
-        gap: 35px;
-    }
-
-    .navbar ul li a {
-        font-size: 18px;
-    }
-
-    .navbar .profile {
-        gap: 20px;
-    }
-
-    .navbar .profile button {
-        padding: 8px 16px;
-        font-size: 16px;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .home {
-        padding: 50px 6%;
-    }
-
-    .home-info h1 {
-        font-size: 48px;
-    }
-
-    .home-info h2 {
-        font-size: 28px;
-    }
-
-    .home-img .img-box {
-        width: 420px;
-        height: 420px;
-    }
-}
-
 /* Tablet screens */
 @media (max-width: 1023px) {
     .navbar {
@@ -1435,10 +1376,11 @@ html {
 
     .navbar ul.show {
         display: flex;
+        gap: 20px;
     }
 
     .navbar ul li a {
-        font-size: 16px;
+        font-size: 24px;
     }
 
     .profile .menu-toggle {
@@ -1473,9 +1415,10 @@ html {
         width: 300px;
         height: 300px;
     }
+
     .btn {
-        padding: 10px 20px;   
-        font-size: 12px; 
+        padding: 10px 20px;
+        font-size: 12px;
     }
 
     .secondary {
@@ -1493,7 +1436,7 @@ html {
     }
 
     .product-item {
-        min-width: 180px; /* slightly smaller cards */
+        min-width: 180px;
         padding: 10px;
     }
 
@@ -1521,6 +1464,138 @@ html {
         padding: 6px 12px;
         font-size: 13px;
     }
+
+    .discount-slide {
+        margin: 0 25px;
+        font-size: 15px;
+    }
+
+    .slide {
+        flex: 0 0 400px;
+    }
+
+    .slide img {
+        height: 220px;
+    }
+
+    #product-search {
+        min-width: 200px;
+        font-size: 15px;
+    }
+
+    .search-container .material-symbols-outlined {
+        font-size: 26px;
+        padding: 5px;
+    }
+
+    .sort label,
+    .sort select {
+        font-size: 15px;
+        height: 34px;
+        padding: 0 12px;
+    }
+
+    .categories-list h2 {
+        font-size: 28px;
+    }
+
+    .category {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+    .product-info p,
+    .product-card .rating,
+    .product-card .rating-value {
+        font-size: 14px;
+    }
+
+    .product-info button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .btn-product {
+        padding: 10px 32px;
+        font-size: 15px;
+    }
+
+    .about {
+        padding: 20px 40px;
+    }
+
+    .about h1 {
+        font-size: 32px;
+    }
+
+    .about-story {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-story img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .about-story .text h2 {
+        font-size: 24px;
+    }
+
+    .about-story .text p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .values {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .value-card {
+        width: 250px;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .value-card i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .team {
+        gap: 40px;
+    }
+
+    .team-member {
+        width: 180px;
+        padding: 24px;
+    }
+
+    .team-member img {
+        height: 140px;
+    }
+
+    .team-member h3 {
+        font-size: 18px;
+    }
+
+    .team-member p {
+        font-size: 14px;
+    }
 }
 
 /*  Mobile screens */
@@ -1541,10 +1616,12 @@ html {
 
     .navbar ul.show {
         display: flex;
+        gap: 20px;
+
     }
 
     .navbar ul li a {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .profile .menu-toggle {
@@ -1587,8 +1664,8 @@ html {
     }
 
     .btn {
-        padding: 4px 16px;   
-        font-size:12px; 
+        padding: 4px 16px;
+        font-size: 12px;
     }
 
     .secondary {
@@ -1634,5 +1711,145 @@ html {
         padding: 4px 10px;
         font-size: 12px;
     }
-    
+
+    .discount-slide {
+        margin: 0 20px;
+        font-size: 14px;
+    }
+
+    .slide {
+        flex: 0 0 300px;
+    }
+
+    .slide img {
+        height: 180px;
+    }
+
+    #product-search {
+        min-width: 150px;
+        font-size: 14px;
+    }
+
+    .search-container .material-symbols-outlined {
+        font-size: 24px;
+        padding: 4px;
+    }
+
+    .sort-flex {
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+
+    .sort label,
+    .sort select {
+        font-size: 14px;
+        height: 32px;
+        padding: 0 10px;
+    }
+
+    .categories-list h2 {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .category {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .product-card img {
+        height: 150px;
+        padding-top: 10px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .product-info p,
+    .product-card .rating,
+    .product-card .rating-value {
+        font-size: 13px;
+    }
+
+    .product-info button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .btn-product {
+        padding: 8px 28px;
+        font-size: 14px;
+    }
+
+    .about {
+        padding: 20px 20px;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .about-story {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-story img {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .about-story .text h2 {
+        font-size: 20px;
+    }
+
+    .about-story .text p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .values {
+        display: flex;
+        gap: 20px;
+    }
+
+    .value-card {
+        width: 200px;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .value-card i {
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+
+    .team {
+        gap: 20px;
+    }
+
+    .team-member {
+        width: 160px;
+        padding: 20px;
+    }
+
+    .team-member img {
+        height: 120px;
+    }
+
+    .team-member h3 {
+        font-size: 16px;
+    }
+
+    .team-member p {
+        font-size: 13px;
+    }
+
 }
