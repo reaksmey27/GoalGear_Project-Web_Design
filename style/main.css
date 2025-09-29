@@ -909,6 +909,7 @@ html {
 .container h2 {
     color: #FF9933;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .about-story {
@@ -986,7 +987,7 @@ html {
 .team-member {
     text-align: center;
     width: 300px;
-    padding: 32px;
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, background 0.3s;
@@ -997,7 +998,8 @@ html {
 
 .team-member img {
     width: 100%;
-    height: 250px;
+    border-radius: 15px;
+    height: 330px;
     margin-bottom: 10px;
 }
 
@@ -1612,17 +1614,13 @@ html {
         margin-bottom: 10px;
     }
 
-    .team {
-        gap: 40px;
-    }
-
     .team-member {
         width: 300px;
-        padding: 24px;
+        padding: 10px;
     }
 
     .team-member img {
-        height: 160px;
+        height: 230px;
     }
 
     .team-member h3 {
@@ -1915,40 +1913,49 @@ html {
     }
 
     .values {
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
     .value-card {
-        width: 160px;
+        width: 300px;
         padding: 15px;
         font-size: 12px;
     }
 
     .value-card i {
-        font-size: 20px;
+        font-size: 50px;
+        margin-bottom: 8px;
+    }
+
+    .value-card h3 {
+        font-size: 18px;
         margin-bottom: 8px;
     }
 
     .team {
+        align-items: center;
+        flex-direction: column;
         gap: 20px;
         margin-bottom: 10px;
     }
 
     .team-member {
-        width: 160px;
-        padding: 0 20px;
+        width: 300px;
+        padding: 15px;
     }
 
     .team-member img {
-        height: 90px;
+        height: 100%;
     }
 
     .team-member h3 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .team-member p {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .partner-section {
