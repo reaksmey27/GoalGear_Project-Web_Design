@@ -961,10 +961,16 @@ html {
 }
 
 .value-card i {
-    font-size: 36px;
+    font-size: 40px;
     color: #FF9933;
     margin-bottom: 15px;
-    display: block;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover i {
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
 }
 
 .value-card h3 {
